@@ -98,6 +98,10 @@ body {
     color: #d9534f;
 }
 
+body {
+    background-color: #F6F6F6;
+}
+
 .btn-primary.btn-outline:hover,
 .btn-success.btn-outline:hover,
 .btn-info.btn-outline:hover,
