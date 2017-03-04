@@ -65,7 +65,7 @@
         <td>GodIsGreat@HolyRomanEmpire.org</td>
         <td>1/5/813</td>
         <td>1/7/813</td>
-        <td>DEUS VULT</td>
+        <td>Requesting Help to Conquer Europe</td>
         <td>Germany</td>
       </tr> 
     </tbody>
@@ -73,7 +73,7 @@
   <br>
   <br>
 
-  <center><h1>Your Information</h1></center>
+  <center><h1>Your Information</h1>
 
 <div class="contentcontainer med left" style="margin-left: 30px;">
 <form action="action_page.php">
@@ -85,6 +85,24 @@
   <br>
   Contact Information:<br>
   <input type="text" name="description"><br>
+  
+  <h1>Location</h1>
+
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(37.3541,-121.9552), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+</center>
 
 </body>
 
