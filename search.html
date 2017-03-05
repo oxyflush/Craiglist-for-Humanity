@@ -54,10 +54,10 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="c">ABOUT</a></li>
+        <li><a href="Home2.html#abt">ABOUT</a></li>
         <li><a href="Search.html">VOLUNTEER</a></li>
         <li><a href="Home2.html#help">ASK FOR HELP</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="Home2.html#cont">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -69,7 +69,7 @@
   <form class="form-inline">
     <div class="input-group">
       <div class="form-group">
-    <input type = "text" onkeyup = "myFunction()"class="form-control" id="myInput" rows="1" placeholder="Search..."></textarea>
+    <input type = "text" size="75" onkeyup = "myFunction()"class="form-control" id="myInput" rows="1" placeholder="Search..."></textarea>
   </div></div>
       
         <br><br><label class="radio-inline"><input type="radio" name="optradio" id = "a" checked>Name/Organization</label>
@@ -92,6 +92,7 @@
     <th onclick="sortTable(2)">Job</th>
     <th onclick="sortTable(3)">Date</th>
     <th onclick="sortTable(4)">Date Created</th>
+    <th>Volunteer</th>
   </tr>
   <tr>
     <td>Berglunds snabbkop</td>
@@ -99,6 +100,7 @@
     <td>Make dinner</td>
     <td>2017.03.24</td>
     <td>2017.03.04</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>North/South Corp.</td>
@@ -106,6 +108,7 @@
     <td>Help us find our direction</td>
     <td>2017.03.24</td>
     <td>2017.03.01</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>Alfreds Futterkiste</td>
@@ -113,6 +116,7 @@
     <td>Feed my puppy</td>
     <td>2017.03.24</td>
     <td>2017.01.30</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>Holy Roman Empire</td>
@@ -120,6 +124,7 @@
     <td>Help us conquer Europe!</td>
     <td>0813.02.01</td>
     <td>0813.01.02</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>Magazzini Alimentari Riuniti</td>
@@ -127,6 +132,7 @@
     <td>Buy me some pasta</td>
     <td>2016.07.09</td>
     <td>2017.03.04</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>Paris specialites</td>
@@ -134,6 +140,7 @@
     <td>Mail our bulletins</td>
     <td>2017.03.04</td>
     <td>2017.02.21</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>Island Trading</td>
@@ -141,6 +148,7 @@
     <td>Trade coconuts</td>
     <td>2017.03.05</td>
     <td>2017.02.24</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
   <tr>
     <td>Laughing Bacchus Winecellars</td>
@@ -148,8 +156,48 @@
     <td>Sweep the cellars</td>
     <td>2017.03.05</td>
     <td>2017.02.28</td>
+    <td><button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button></td>
   </tr>
-</table>
+</table></center></div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Volunteer</h4>
+        </div>
+        <div class="modal-body">
+        <form action="Home2.php" method = "post" style="text-align:left;">
+       <div class="form-inline">
+    <label for="exampleTextarea">Name</label><br>
+    <textarea class="form-control" id="Name" name = "name" rows="1" placeholder="Enter full name"></textarea><br>
+    <label for="exampleTextarea">Email</label><br>
+    <textarea class="form-control" id="Email" name = email rows="1" placeholder="Enter email"></textarea><br>
+    <small id="contact" class="form-text text-muted">We'll never share your email with anyone else.</small><br>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleTextarea">Personal Description</label>
+    <textarea class="form-control" id="Description" name = "description" rows="1" placeholder="Describe yourself"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Phone Number</label>&nbsp;
+    <textarea class="form-control" id="date" name = "date" rows="1" placeholder="xxx.xxx.xxxx"></textarea>&nbsp;
+  </div>
+</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
 
 <script>
 function sortTable(n) {
@@ -209,7 +257,6 @@ function sortTable(n) {
 </script>
 </body>
 <br>
-<br> 
 
 <div id="map" style="height: 400px"></div>
     <script>
@@ -303,5 +350,28 @@ function myFunction() {
 }
 </script>
 
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
     
 </html>
