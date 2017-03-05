@@ -3,7 +3,6 @@
   <head>
    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Marker Clustering</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -74,9 +73,15 @@
   </div></div>
       
         <button type="button" class="btn btn-default">Search</button>
-      
+        <br><br><label class="radio-inline"><input type="radio" name="optradio">Name/Organization</label>
+<label class="radio-inline"><input type="radio" name="optradio">Location</label>
+<label class="radio-inline"><input type="radio" name="optradio">Job</label>
+<label class="radio-inline"><input type="radio" name="optradio">Date</label>
+<label class="radio-inline"><input type="radio" name="optradio">Date Created</label>      
     </div>
+
   </form>
+
   <div class="container">
 </div>
 </div>
@@ -87,7 +92,7 @@
     <th onclick="sortTable(1)">Location</th>
     <th onclick="sortTable(2)">Job</th>
     <th onclick="sortTable(3)">Date</th>
-    <th onclick="sortTable(3)">Date Created</th>
+    <th onclick="sortTable(4)">Date Created</th>
   </tr>
   <tr>
     <td>Berglunds snabbkop</td>
@@ -115,7 +120,7 @@
     <td>Germany</td>
     <td>Help us conquer Europe!</td>
     <td>0813.01.02</td>
-    <td>0814.02.01</td>
+    <td>2014.02.01</td>
   </tr>
   <tr>
     <td>Magazzini Alimentari Riuniti</td>
@@ -207,12 +212,12 @@ function sortTable(n) {
 <br>
 <br> 
 
-<div id="map"></div>
+<div id="map" style="height: 400px"></div>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: {lat: 37.35, lng: -121.9552}
+          zoom: 14,
+          center: {lat: 37.349818, lng: -121.935132}
         });
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         var markers = locations.map(function(location, i) {
@@ -227,21 +232,21 @@ function sortTable(n) {
       }
       var locations = [
         //
-        {lat: 37.3541, lng: -121.8552},
+        {lat: 37.349818, lng: -121.935132},
         {lat: 37.3841, lng: -121.9552},
-        {lat: 37.3441, lng: -121.9552},
+        {lat: 37.351626, lng: -121.951268},
         {lat: 37.0541, lng: -121.9552},
-         {lat: 37.1841, lng: -121.9752},
+         {lat: 37.347464, lng: -121.889040},
         {lat: 37.1441, lng: -123.9952},
-        {lat: 37.2541, lng: -121.7552},
+        {lat: 37.356538, lng: -121.911700},
         {lat: 37.2841, lng: -121.8752},
         {lat: 37.2441, lng: -121.9452},
-        {lat: 37.1441, lng: -123.9752},
-        {lat: 37.1441, lng: -123.9962},
-        {lat: 37.2441, lng: -124.9452},
+        {lat: 37.359096, lng: -121.968305},
+        {lat: 37.343847, lng: -121.971524},
+        {lat: 37.339036, lng: -121.915605},
         {lat: 37.3541, lng: -121.8552},
-       {lat: 33.3841, lng: -121.9552},
-        {lat: 37.6441, lng: -121.9552},
+       {lat: 37.349169, lng: -121.981265},
+        {lat: 37.346201, lng: -121.949337},
         {lat: 37.6541, lng: -121.9552},
         {lat: 37.6841, lng: -121.9752},
          {lat: 37.1741, lng: -123.9852},
