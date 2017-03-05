@@ -70,7 +70,7 @@
   <form class="form-inline">
     <div class="input-group">
       <div class="form-group">
-    <textarea class="form-control" id="time" name = "time" rows="1" placeholder="Search..."></textarea>
+    <input type = "text" onkeyup = "myFunction()"class="form-control" id="myInput" rows="1" placeholder="Search..."></textarea>
   </div></div>
       
         <button type="button" class="btn btn-default">Search</button>
@@ -114,8 +114,8 @@
     <td>Holy Roman Empire</td>
     <td>Germany</td>
     <td>Help us conquer Europe!</td>
-    <td>1/2/813</td>
-    <td>2/1/814</td>
+    <td>0813.01.02</td>
+    <td>0814.02.01</td>
   </tr>
   <tr>
     <td>Magazzini Alimentari Riuniti</td>
@@ -260,6 +260,29 @@ function sortTable(n) {
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBQMQBHvjzAVc1yLMNC0kRYY3OdbA4_ew&callback=initMap">
     </script>
 
+
+    <script>
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  var userChoice = 0;
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
 
     
 </html>
