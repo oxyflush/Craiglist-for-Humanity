@@ -63,12 +63,22 @@ body {
     padding: 60px 50px;
 }
 
+.bg-white {
+    background-color: #ffffff;
+}
+
 .bg-grey {
     background-color: #f6f6f6;
 }
 <style>
 .logo {
     font-size: 200px;
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
 }
 
 /*Bootstrap button outline override*/
