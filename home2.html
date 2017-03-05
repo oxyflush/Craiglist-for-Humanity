@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang=en>
+  <head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marker Clustering</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  <script type="text/javascript">$('a[href*="#"]:not([href="#"])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});</script>
+  <title>Craigslist for Humanity</title>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="Home2.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">CFH</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="Search.html">VOLUNTEER</a></li>
+        <li><a href="#help">ASK FOR HELP</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <center><h1>Craigslist for Humanity</h1> 
+  <p>We provide you with the opportunity to help others and receive help from your community.</p><br>
+  <div class="container">
+<div class="row">
+    <a class="btn btn-default btn-outline btn-lg" href = "">Volunteer</a>
+    <a class="btn btn-default btn-outline btn-lg" href = "#help">Ask for Help</a></center>
+</div>
+</div>
+</div>
+
+
+
+<a name="help"></a>
+<div class="container-fluid bg-white">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Ask for Help</h2>
+      <h4><strong>INDIVIDUALS</strong> can ask for help from their friends in the neighborhood.</h4> 
+      <h4><strong>ORGANIZATIONS</strong> can recruit a large number of people to solve pressing problems in the community.</h4>
+     <button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#demo">
+      <span class="glyphicon glyphicon-collapse-down"></span> Request Volunteers
+    </button>
+  <div id="demo" class="collapse"><br>
+    <form action="Home2.php" method = "post">
+       <div class="form-inline">
+    <label for="exampleTextarea">Name</label><br>
+    <textarea class="form-control" id="Name" name = "name" rows="1" placeholder="Enter full name"></textarea><br><br>
+    <label for="exampleTextarea">Email</label><br>
+    <textarea class="form-control" id="Email" name = email rows="1" placeholder="Enter email"></textarea><br>
+    <small id="contact" class="form-text text-muted">We'll never share your email with anyone else.</small><br><br>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleTextarea">Personal Description</label>
+    <textarea class="form-control" id="Description" name = "description" rows="1" placeholder="Describe yourself"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Job Description</label>
+    <textarea class="form-control" id="job" name = "jobDesc" rows="2" placeholder="Describe the job"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Number of People Needed</label>
+    <textarea class="form-control" id="number" name = "num" rows="1" placeholder="Enter a number"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Location</label>
+    <textarea class="form-control" id="loc" name = "location" rows="1" placeholder="Enter location"></textarea>
+  </div>
+  <div class="form-inline">
+  <div class="form-group">
+    <label for="exampleTextarea">Date</label>&nbsp;
+    <textarea class="form-control" id="date" name = "date" rows="1" placeholder="mm.dd.yy"></textarea>&nbsp;
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Time</label>&nbsp;
+    <textarea class="form-control" id="time" name = "time" rows="1" placeholder="XX:XX AM/PM"></textarea>
+  </div></div><br>
+  <fieldset class="form-group">
+    <!--<legend>Are you an individual or part an organization?</legend>-->
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        I am an individual
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        I am part of an organization
+      </label>
+    </div>
+  </fieldset>
+  <button type="submit" class="btn btn-default btn-outline btn-md">Submit</button>
+</form>
+  </div>
+     
+      <div class="row">
+    <!--<a class="btn btn-default btn-outline btn-lg" href = "individual.html">I Am an Individual</a>
+    <a class="btn btn-default btn-outline btn-lg" href = "organization.html">I Am Part of an Organization</a>-->
+</div>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span> 
+    </div>
+    <div class="col-sm-8">
+    <h2></h2>
+       
+    </div>
+  </div>
+</div>
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: {lat: 37.35, lng: -121.9552}
+        });
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+        //
+        {lat: 37.3541, lng: -121.8552},
+      {lat: 37.3841, lng: -121.9552},
+        {lat: 37.3441, lng: -121.9552},
+        {lat: 37.0541, lng: -121.9552},
+      {lat: 37.1841, lng: -121.9752},
+        {lat: 37.1441, lng: -121.9952},
+
+        
+      ]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBQMQBHvjzAVc1yLMNC0kRYY3OdbA4_ew&callback=initMap">
+    </script>
+  </body>
+
+
+</body>
+  </html>
