@@ -29,7 +29,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
         <li><a href="Search.html">VOLUNTEER</a></li>
-        <li><a href="Submit.html">ASK FOR HELP</a></li>
+        <li><a href="#help">ASK FOR HELP</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -37,30 +37,86 @@
 </nav>
 
 <div class="jumbotron">
-  <center><h1><a name="intro"></a>Craigslist for Humanity</h1> 
+  <center><h1>Craigslist for Humanity</h1> 
   <p>We provide you with the opportunity to help others and receive help from your community.</p><br>
   <div class="container">
 <div class="row">
-    <a class="btn btn-default btn-outline btn-lg" href = "Search.html">Search for Opportunities</a>
-    <a class="btn btn-default btn-outline btn-lg" href = "Submit.html">Submit an Opportunity</a></center>
+    <a class="btn btn-default btn-outline btn-lg" href = "">Search for Opportunities</a>
+    <a class="btn btn-default btn-outline btn-lg" href = "#help">Ask for Help</a></center>
 </div>
 </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Ask for Help</h2>
+     <form>
+       <div class="form-inline">
+    <label for="exampleTextarea">Name</label><br>
+    <textarea class="form-control" id="description" rows="1" placeholder="Enter name"></textarea><br><br>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="contact" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Personal Description</label>
+    <textarea class="form-control" id="description" rows="2" placeholder="Describe yourself"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Job Description</label>
+    <textarea class="form-control" id="job" rows="3" placeholder="Describe the job"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Number of People Needed</label>
+    <textarea class="form-control" id="number" rows="1"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Location</label>
+    <textarea class="form-control" id="number" rows="1" placeholder="Enter location"></textarea>
+  </div>
+  <fieldset class="form-group">
+    <!--<legend>Are you an individual or part an organization?</legend>-->
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        I am an individual
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        I am part of an organization
+      </label>
+    </div>
+  </fieldset>
+  <button type="submit" class="btn btn-default btn-outline btn-md">Submit</button>
+</form>
+      <div class="row">
+    <!--<a class="btn btn-default btn-outline btn-lg" href = "individual.html">I Am an Individual</a>
+    <a class="btn btn-default btn-outline btn-lg" href = "organization.html">I Am Part of an Organization</a>-->
+</div>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span>
+    </div>
+  </div>
 </div>
 
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo"></span> 
+      <span class="glyphicon glyphicon-signal logo"></span> 
     </div>
     <div class="col-sm-8">
-      <h2>Our Values</h2>
-      <h4><strong>MISSION:</strong> Our mission is to provide help for you and offer you the chance to help others in your community.</h4> 
-      <h4><strong>VISION:</strong> Our vision is to aid in the growth of a community.</h4>
+       
     </div>
   </div>
 </div>
 
 <div class="google-maps">
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12686.532812217465!2d-121.93024474999999!3d37.3511916!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1488668970519" width="1600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12686.532812217465!2d-121.93024474999999!3d37.3511916!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1488668970519" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
   </html>
