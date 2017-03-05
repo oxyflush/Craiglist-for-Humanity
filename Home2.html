@@ -90,7 +90,7 @@
       <span class="glyphicon glyphicon-collapse-down"></span> Request Volunteers
     </button>
   <div id="demo" class="collapse"><br>
-    <form action="Home2.php" method = "post">
+    <form action="Home2.php" method = "post" style="text-align:left;">
        <div class="form-inline">
     <label for="exampleTextarea">Name</label><br>
     <textarea class="form-control" id="Name" name = "name" rows="1" placeholder="Enter full name"></textarea><br><br>
@@ -142,32 +142,54 @@
   <button type="submit" class="btn btn-default btn-outline btn-md">Submit</button>
 </form>
   </div>
-     
-      <div class="row">
-    <!--<a class="btn btn-default btn-outline btn-lg" href = "individual.html">I Am an Individual</a>
-    <a class="btn btn-default btn-outline btn-lg" href = "organization.html">I Am Part of an Organization</a>-->
-</div>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-globe logo"></span>
     </div>
   </div>
 </div>
+</div>
 
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span> 
+      <span class="glyphicon glyphicon-search logo"></span> 
     </div>
     <div class="col-sm-8">
-    <h2></h2>
-       
+    <h2>About Us</h2>
+      <h4>We're like Craiglist, except for humanity!</h4> 
+      <p>We are proud to provide the public with an opportunity to help their friends in the neighborhood.</p>       
     </div>
   </div>
 </div>
 
-<div class="google-maps">
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12686.532812217465!2d-121.93024474999999!3d37.3511916!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1488668970519" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Santa Clara, CA</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> craig@4humanity.com</p> 
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
 
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
