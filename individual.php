@@ -1,7 +1,7 @@
 <?php
     $name = $_POST["name"]; //You have to get the form data
     $description = $_POST["description"];
-    $contact = $_POST["contact"];
+    $contact = $_POST["contactz"];
     $job = $_POST["job"]; //You have to get the form data
     $number = $_POST["number"];
     $location = $_POST["location"];
