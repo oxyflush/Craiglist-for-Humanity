@@ -1,22 +1,6 @@
 <!doctype html>
 <html lang=en>
   <head>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Marker Clustering</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
   <script type="text/javascript">$('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
     var target = $(this.hash);
@@ -43,6 +27,7 @@
 
   </head>
   <body>
+  <a name = "top"></a>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -51,14 +36,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">CFH</a>
+      <a class="navbar-brand smoothScroll"  href="#top" >CFH</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="Search.html">VOLUNTEER</a></li>
-        <li><a href="#help">ASK FOR HELP</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#about" class = "smoothScroll">ABOUT</a></li>
+        <li><a href="search.html" class = "smoothScroll">VOLUNTEER</a></li>
+        <li><a href="#help" class = "smoothScroll">ASK FOR HELP</a></li>
+        <li><a href="#contact" class = "smoothScroll">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -68,27 +53,44 @@
   <center><h1>Craigslist for Humanity</h1> 
   <p>We provide you with the opportunity to help others and receive help from your community.</p><br>
   <div class="container">
-<div class="row">
-    <a class="btn btn-default btn-outline btn-lg" href = "">Volunteer</a>
-    <a class="btn btn-default btn-outline btn-lg" href = "#help">Ask for Help</a></center>
-</div>
-</div>
-</div>
+<div class="row" >
+    <a class="btn btn-default btn-outline btn-lg" href = "search.html">Volunteer</a>
+    <a class="btn btn-default btn-outline btn-lg smoothScroll" href = "#help">Ask for Help</a></center>
 
-
+</div>
+<div class="container-fluid text-center">
+  <h3>With Craigslist for Humanity you find people who can...</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span style ="font-size:50px; color:#f4511e;" class="glyphicon glyphicon-trash orange"></span>
+      <h4>TAKE OUT YOUR GARGABE</h4>
+    </div>
+    <div class="col-sm-4">
+      <span style="font-size:50px; color:#f4511e;" class="glyphicon glyphicon-cutlery"></span>
+      <h4>COOK A MEAL FOR YOU</h4>
+    </div>
+    <div class="col-sm-4">
+      <span style="font-size:50px;color:#f4511e" class="glyphicon glyphicon-road"></span>
+      <h4>WALK YOUR DOG</h4>
+    </div>
+    </div>
+   
 
 <a name="help"></a>
-<div class="container-fluid bg-white">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
+
       <h2>Ask for Help</h2>
-      <h4><strong>INDIVIDUAL</strong> can ask for help from their friends in the neighborhood.</h4> 
+
+      <h4><strong>INDIVIDUALS</strong> can ask for help from their friends in the neighborhood.</h4> 
       <h4><strong>ORGANIZATIONS</strong> can recruit a large number of people to solve pressing problems in the community.</h4>
      <button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#demo">
       <span class="glyphicon glyphicon-collapse-down"></span> Request Volunteers
     </button>
   <div id="demo" class="collapse"><br>
-    <form action="Home2.php" method = "post">
+    <form action="Home2.php" method = "post" style="text-align:left;">
        <div class="form-inline">
     <label for="exampleTextarea">Name</label><br>
     <textarea class="form-control" id="Name" name = "name" rows="1" placeholder="Enter full name"></textarea><br><br>
@@ -140,32 +142,29 @@
   <button type="submit" class="btn btn-default btn-outline btn-md">Submit</button>
 </form>
   </div>
-     
-      <div class="row">
-    <!--<a class="btn btn-default btn-outline btn-lg" href = "individual.html">I Am an Individual</a>
-    <a class="btn btn-default btn-outline btn-lg" href = "organization.html">I Am Part of an Organization</a>-->
-</div>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-globe logo"></span>
     </div>
   </div>
 </div>
+</div>
 
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span> 
+      <span class="glyphicon glyphicon-search logo"></span> 
     </div>
     <div class="col-sm-8">
-    <h2></h2>
-       
+    <h2>About Us</h2>
+      <h4>We're like Craiglist, except for humanity!</h4> 
+      <p>We are proud to provide the public with an opportunity to help their friends in the neighborhood.</p>       
     </div>
   </div>
 </div>
-<!--editing -->
-<div class="container">
-<h1>Contact Address</h1><br>
+
+<div class="container-fluid bg-white">
+<center><h1>Contact Address</h1><br>
   <div class="row text-center">
     <div class="col-sm-3 col-xs-6 first-box">
         <h1><span class="glyphicon glyphicon-earphone"></span></h1>
@@ -189,4 +188,38 @@
     </div>
   </div>
 </div>
+</html>
+
+  <!--editing
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Santa Clara, CA</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> craig@4humanity.com</p> 
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="smoothscroll.js"></script>
+</div>
+-->
   </html>
