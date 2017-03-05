@@ -1,8 +1,8 @@
 <?php
-    $name = $_POST["name"]; //You have to get the form data
+    $name = $_POST["organization"]; //You have to get the form data
     $description = $_POST["description"];
     $vvv = $_POST["vvv"];
-    $job = $_POST["job"];
+    $job = $_POST["job"]; //You have to get the form data
     $number = $_POST["number"];
     $location = $_POST["location"];
     $date = $_POST["date"];
